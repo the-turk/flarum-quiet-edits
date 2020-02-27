@@ -2,7 +2,7 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/the-turk/flarum-quiet-edits/blob/master/LICENSE) [![Latest Stable Version](https://img.shields.io/packagist/v/the-turk/flarum-quiet-edits.svg)](https://packagist.org/packages/the-turk/flarum-quiet-edits) [![Total Downloads](https://img.shields.io/packagist/dt/the-turk/flarum-quiet-edits.svg)](https://packagist.org/packages/the-turk/flarum-quiet-edits)
 
-I'm obsessed about edit functions nowadays. 😂
+Lately i've been obsessed with edit functions. 😂
 
 As i promised in @Kylo#121339, this is a preparation for next version of my [Diff extension](https://discuss.flarum.org/d/22779-diff-for-flarum). I'm not sure if i picked the right title for this extension 🤔. Anyways, edits made within the grace period immediately after posting will not be considered as formal edits. You can also ignore whitespace and case differences independently from the grace period.
 
@@ -11,7 +11,9 @@ As i promised in @Kylo#121339, this is a preparation for next version of my [Dif
 
 It raises new events for developers, called `PostWasRevisedQuietly` & `PostWasRevisedLoudly`
 
-**Attention: Diff for Flarum extension is incompatible with this right now and it is planned to be compatible on its v0.1.0-beta.7 release**
+**! Attention: Diff for Flarum extension is incompatible with this right now and it is planned to be compatible on its v0.1.0-beta.7 release**
+
+![Settings](https://i.ibb.co/nsX8nrX/shsh.png)
 
 ## Requirements
 
