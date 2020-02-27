@@ -6,7 +6,7 @@ Lately i've been obsessed with edit functions. 😂
 
 As i promised in @Kylo#121339, this is a preparation for next version of my [Diff extension](https://discuss.flarum.org/d/22779-diff-for-flarum). I'm not sure if i picked the right title for this extension 🤔. Anyways, edits made within the grace period immediately after posting will not be considered as formal edits. You can also ignore whitespace and case differences independently from the grace period.
 
-- Then again, it's based on @jfcherng's [diff](https://github.com/jfcherng/php-diff) repository.
+- And again, it's based on @jfcherng's [diff](https://github.com/jfcherng/php-diff) repository.
 - Extension's icon made by [Freepik](https://www.flaticon.com/authors/freepik).
 
 It raises new events for developers, called `PostWasRevisedQuietly` & `PostWasRevisedLoudly`
