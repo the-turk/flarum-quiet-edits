@@ -1,0 +1,9 @@
+the-turk-quiet-edits:
+    admin:
+      settings:
+        title:                  Sessiz Düzenleme Ayarları
+        gracePeriod:            Ek süre (saniye)
+        gracePeriodHelp:        Mesaj gönderildikten sonra ek süre içinde yapılan düzenlemeler, düzenleme olarak sayılmaz.
+        onlyUnsigned:           Sadece <strong>işaretsiz tamsayılar</strong> geçerlidir!
+        ignoreCase:             Büyük küçük harflerdeki değişiklikleri yok say
+        ignoreWhitespace:       Boşluk değişikliklerini yok say
