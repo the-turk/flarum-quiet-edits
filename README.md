@@ -42,7 +42,7 @@ Enable the extension. The grace period is 120 seconds, whitespace and case diffe
 
 ## Links
 
-- [Flarum Discuss post](https://discuss.flarum.org/)
+- [Flarum Discuss post](https://discuss.flarum.org/d/22916-quiet-edits)
 - [Source code on GitHub](https://github.com/the-turk/flarum-quiet-edits)
 - [Changelog](https://github.com/the-turk/flarum-quiet-edits/blob/master/CHANGELOG.md)
 - [Report an issue](https://github.com/the-turk/flarum-quiet-edits/issues)
