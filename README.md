@@ -11,8 +11,6 @@ As i promised in @Kylo#121339, this is a preparation for next version of my [Dif
 
 It raises new events for developers, called `PostWasRevisedQuietly` & `PostWasRevisedLoudly`
 
-**! Attention: Diff for Flarum & Edit Notifications extensions are incompatible with this right now and they're planned to be compatible on their next releases.**
-
 ![Settings](https://i.ibb.co/nsX8nrX/shsh.png)
 
 ## Requirements
