@@ -18,8 +18,8 @@
     "source": "https://github.com/the-turk/flarum-quiet-edits"
   },
   "require": {
-    "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.13",
-    "jfcherng/php-diff": "^6.5.1"
+    "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.14",
+    "jfcherng/php-diff": "^6.7.1"
   },
   "autoload": {
     "psr-4": {
