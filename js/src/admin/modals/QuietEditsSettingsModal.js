@@ -36,20 +36,18 @@ export default class QuietEditsSettingsModal extends SettingsModal {
       m('.Form-group', [
           m('label', Switch.component({
               state: this.setting(settingsPrefix + 'ignoreCase', '1')() === '1',
-              children: app.translator.trans(localePrefix + 'ignoreCase'),
               onchange: value => {
                 this.setting(settingsPrefix + 'ignoreCase')(value ? '1' : '0');
               }
-          }))
+          }, app.translator.trans(localePrefix + 'ignoreCase')))
       ]),
       m('.Form-group', [
           m('label', Switch.component({
               state: this.setting(settingsPrefix + 'ignoreWhitespace', '1')() === '1',
-              children: app.translator.trans(localePrefix + 'ignoreWhitespace'),
               onchange: value => {
                 this.setting(settingsPrefix + 'ignoreWhitespace')(value ? '1' : '0');
               }
-          }))
+          }, app.translator.trans(localePrefix + 'ignoreWhitespace')))
       ]),
     ];
   }
