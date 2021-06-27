@@ -1,3 +1,7 @@
+### 0.1.3
+
+- Flarum v1.0.3 compatible
+
 ### 0.1.2
 
 - **Update** version constraints for Flarum 0.1.0-beta.13.

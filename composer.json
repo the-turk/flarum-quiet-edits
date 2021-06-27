@@ -18,8 +18,8 @@
     "source": "https://github.com/the-turk/flarum-quiet-edits"
   },
   "require": {
-    "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.14",
-    "jfcherng/php-diff": "^6.7.1"
+    "flarum/core": "^1.0.2",
+    "jfcherng/php-diff": "^6.10.0"
   },
   "autoload": {
     "psr-4": {
@@ -30,11 +30,9 @@
     "flarum-extension": {
       "title": "Quiet Edits",
       "icon": {
-          "image": "icon.svg",
-          "backgroundColor": "#b72a2a",
-          "backgroundSize": "70% 70%",
-          "backgroundPosition": "center",
-          "backgroundRepeat": "no-repeat"
+        "name": "fas fa-volume-mute",
+        "backgroundColor": "#b72a2a",
+        "color": "#fff"
       }
     }
   }

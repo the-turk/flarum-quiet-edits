@@ -101,24 +101,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-
-/***/ }),
-
 /***/ "./src/admin/index.js":
 /*!****************************!*\
   !*** ./src/admin/index.js ***!
@@ -128,127 +110,36 @@ function _inheritsLoose(subClass, superClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/app */ "flarum/app");
-/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modals_QuietEditsSettingsModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals/QuietEditsSettingsModal */ "./src/admin/modals/QuietEditsSettingsModal.js");
+/* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/common/app */ "flarum/common/app");
+/* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_common_app__WEBPACK_IMPORTED_MODULE_0__);
 
-
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('the-turk/quiet-edits', function (app) {
-  app.extensionSettings['the-turk-quiet-edits'] = function () {
-    return app.modal.show(new _modals_QuietEditsSettingsModal__WEBPACK_IMPORTED_MODULE_1__["default"]());
-  };
+flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('the-turk-quiet-edits', function (app) {
+  app.extensionData["for"]('the-turk-quiet-edits').registerSetting({
+    setting: 'the-turk-quiet-edits.grace_period',
+    type: 'number',
+    label: app.translator.trans('the-turk-quiet-edits.admin.settings.grace_period_label'),
+    help: app.translator.trans('the-turk-quiet-edits.admin.settings.grace_period_text')
+  }).registerSetting({
+    setting: 'the-turk-quiet-edits.ignore_case_differences',
+    type: 'boolean',
+    label: app.translator.trans('the-turk-quiet-edits.admin.settings.ignore_case_differences_label')
+  }).registerSetting({
+    setting: 'the-turk-quiet-edits.ignore_whitespace_differences',
+    type: 'boolean',
+    label: app.translator.trans('the-turk-quiet-edits.admin.settings.ignore_whitespace_differences_label')
+  });
 });
 
 /***/ }),
 
-/***/ "./src/admin/modals/QuietEditsSettingsModal.js":
-/*!*****************************************************!*\
-  !*** ./src/admin/modals/QuietEditsSettingsModal.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return QuietEditsSettingsModal; });
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/app */ "flarum/app");
-/* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/SettingsModal */ "flarum/components/SettingsModal");
-/* harmony import */ var flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var flarum_components_Switch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/Switch */ "flarum/components/Switch");
-/* harmony import */ var flarum_components_Switch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Switch__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
- // just to make things easier
-
-var settingsPrefix = 'the-turk-quiet-edits.';
-var localePrefix = settingsPrefix + 'admin.settings.';
-
-var QuietEditsSettingsModal =
-/*#__PURE__*/
-function (_SettingsModal) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(QuietEditsSettingsModal, _SettingsModal);
-
-  function QuietEditsSettingsModal() {
-    return _SettingsModal.apply(this, arguments) || this;
-  }
-
-  var _proto = QuietEditsSettingsModal.prototype;
-
-  _proto.title = function title() {
-    return flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'title');
-  }
-  /**
-   * Build modal form.
-   *
-   * @returns {*}
-   */
-  ;
-
-  _proto.form = function form() {
-    var _this = this;
-
-    return [m('.Form-group', [m('label', flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'gracePeriod')), m('.helpText', flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'gracePeriodHelp')), m('div', {
-      className: 'helpText'
-    }, m('i', {
-      className: 'quietEditsSettingsIcon fas fa-exclamation-circle'
-    }), m('span', flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'onlyUnsigned'))), m('input[type=text].FormControl', {
-      bidi: this.setting(settingsPrefix + 'gracePeriod', '120'),
-      placeholder: '120'
-    })]), m('.Form-group', [m('label', flarum_components_Switch__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      state: this.setting(settingsPrefix + 'ignoreCase', '1')() === '1',
-      children: flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'ignoreCase'),
-      onchange: function onchange(value) {
-        _this.setting(settingsPrefix + 'ignoreCase')(value ? '1' : '0');
-      }
-    }))]), m('.Form-group', [m('label', flarum_components_Switch__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      state: this.setting(settingsPrefix + 'ignoreWhitespace', '1')() === '1',
-      children: flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(localePrefix + 'ignoreWhitespace'),
-      onchange: function onchange(value) {
-        _this.setting(settingsPrefix + 'ignoreWhitespace')(value ? '1' : '0');
-      }
-    }))])];
-  };
-
-  return QuietEditsSettingsModal;
-}(flarum_components_SettingsModal__WEBPACK_IMPORTED_MODULE_2___default.a);
-
-
-
-/***/ }),
-
-/***/ "flarum/app":
-/*!********************************************!*\
-  !*** external "flarum.core.compat['app']" ***!
-  \********************************************/
+/***/ "flarum/common/app":
+/*!***************************************************!*\
+  !*** external "flarum.core.compat['common/app']" ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = flarum.core.compat['app'];
-
-/***/ }),
-
-/***/ "flarum/components/SettingsModal":
-/*!*****************************************************************!*\
-  !*** external "flarum.core.compat['components/SettingsModal']" ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['components/SettingsModal'];
-
-/***/ }),
-
-/***/ "flarum/components/Switch":
-/*!**********************************************************!*\
-  !*** external "flarum.core.compat['components/Switch']" ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['components/Switch'];
+module.exports = flarum.core.compat['common/app'];
 
 /***/ })
 

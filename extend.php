@@ -11,7 +11,7 @@
  * @author     Hasan Özbey <hasanoozbey@gmail.com>
  * @copyright  2020
  * @license    The MIT License
- * @version    Release: 0.1.2
+ * @version    Release: 0.1.3
  * @link       https://github.com/the-turk/flarum-quiet-edits
  */
 
@@ -23,10 +23,10 @@ use TheTurk\QuietEdits\Listeners\PostActions;
 
 return [
     (new Extend\Frontend('admin'))
-        ->css(__DIR__ . '/less/admin.less')
         ->js(__DIR__ . '/js/dist/admin.js'),
+
     (new Extend\Locales(__DIR__ . '/locale')),
-    function (Dispatcher $events) {
-        $events->subscribe(PostActions::class);
-    },
+
+    (new Extend\Event())
+        ->subscribe(Listeners\PostActions::class),
 ];

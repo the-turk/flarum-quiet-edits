@@ -5,11 +5,9 @@
 Bu eklentiyi kullandığınızda mesaj gönderildikten sonra ek süre içinde yapılan düzenlemeler, düzenleme olarak sayılmaz. Ayrıca büyük/küçük harflerdeki ya da boşlukla ilgili değişiklikleri de yok sayabilirsiniz.
 
 - [jfcherng/php-diff](https://github.com/jfcherng/php-diff) tabanlıdır.
-- Eklenti simgesi [Freepik](https://www.flaticon.com/authors/freepik) grubuna aittir.
+- Geliştiriciler için `PostWasRevisedQuietly` ve `PostWasRevisedLoudly` olmak üzere iki yeni olay ekledim.
 
-Geliştiriciler için `PostWasRevisedQuietly` ve `PostWasRevisedLoudly` olmak üzere iki yeni olay ekledim.
-
-![Ayarlar](https://i.ibb.co/nsX8nrX/shsh.png)
+![Ayarlar](https://i.imgur.com/MZNqmCR.png)
 
 ## Gereksinimler
 
@@ -19,8 +17,6 @@ php sürümünüzü `php -v` komutunu çalıştırarak ve `iconv` pakedinin yük
 
 ## Kurulum
 
-[Bazaar](https://discuss.flarum.org/d/5151) kullanın ya da elle kurulum yapın:
-
 ```bash
 composer require the-turk/flarum-quiet-edits
 ```
@@ -29,7 +25,6 @@ composer require the-turk/flarum-quiet-edits
 
 ```bash
 composer update the-turk/flarum-quiet-edits
-php flarum migrate
 php flarum cache:clear
 ```
 
